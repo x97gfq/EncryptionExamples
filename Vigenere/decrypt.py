@@ -1,6 +1,15 @@
 # Vigenere Cipher 
 # based on source @ https://www.geeksforgeeks.org/vigenere-cipher/
   
+def generateKey(string, key): 
+    key = list(key) 
+    if len(string) == len(key): 
+        return(key) 
+    else: 
+        for i in range(len(string) - len(key)): 
+            key.append(key[i % len(key)]) 
+    return("" . join(key)) 
+
 # This function decrypts the encrypted text and returns the original text 
 def originalText(cipher_text, key): 
     orig_text = [] 
@@ -10,13 +19,14 @@ def originalText(cipher_text, key):
         orig_text.append(chr(x)) 
     return("" . join(orig_text)) 
 
+
 if __name__ == "__main__": 
     cipher = "UEUTCEVRRZXLJXKVFHJX"
-    key = "REDREDREDREDREDREDRE"
+    key = generateKey(cipher,"RED")
     print("Original/Decrypted Text:" + originalText(cipher, key))
 
     #brute force attack:
-    #possibleKeys = ["BLUEBLUEBLUEBLUEBLUE","GREENGREENGREENGREEN","REDREDREDREDREDREDRE"]
+    #possibleKeys = ["BLUE","GREEN","RED"]
     #for x in range(len(possibleKeys)):
     #    key = possibleKeys[x]
     #    cipher = "UEUTCEVRRZXLJXKVFHJX"
