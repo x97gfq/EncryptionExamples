@@ -26,8 +26,8 @@ if __name__ == "__main__":
     print("Original/Decrypted Text:" + originalText(cipher, key))
 
     #brute force attack:
-    #possibleKeys = ["BLUE","GREEN","RED"]
+    #possibleKeys = ["RED", "GREEN", "BLUE"]
     #for x in range(len(possibleKeys)):
-    #    key = possibleKeys[x]
-    #    cipher = "UEUTCEVRRZXLJXKVFHJX"
-    #    print("Possible Original/Decrypted Text:" + originalText(cipher, key))
+    #    ciphertext = "ENCRYPTEDMESSAGEHERE"
+    #    key = generateKey(ciphertext, possibleKeys[x])
+    #    print("Possible Original/Decrypted Text:" + originalText(ciphertext, key))
