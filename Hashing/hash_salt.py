@@ -10,10 +10,10 @@ def hash_password(password):
     pwdhash = binascii.hexlify(pwdhash)
     return (salt + pwdhash).decode('ascii') #joins together the hash with its salt (salt is first 64 characters)
 
-#Ferify a stored password against one provided by user
+#Verify a stored password against one provided by user
 def verify_password(stored_password, provided_password):
-    salt = stored_password[:64]
-    stored_password = stored_password[64:] #the salt is the first 64 characters
+    salt = stored_password[:64] #the salt is the first 64 characters
+    stored_password = stored_password[64:] 
     pwdhash = hashlib.pbkdf2_hmac('sha512', provided_password.encode('utf-8'), salt.encode('ascii'), 100000)
     pwdhash = binascii.hexlify(pwdhash).decode('ascii')
     return pwdhash == stored_password
