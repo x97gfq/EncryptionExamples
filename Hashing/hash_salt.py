@@ -24,9 +24,10 @@ pwd = 'JodreySchoolOfComputerSciecne2020!'
 stored_password = hash_password(pwd)
 print("\n\nThe password '" + pwd + "' will be stored as: " + stored_password)
 
-#verify the password
-print("\n\nVerify Password '" + pwd + "']: " + str(verify_password(stored_password, pwd)))
+#then uncomment these lines and run the whole program
+##verify the password
+#print("\n\nVerify Password '" + pwd + "']: " + str(verify_password(stored_password, pwd)))
 
-#negative test (bad password)
-bad_pwd = 'BadPassword2020!'
-print("\n\nVerify Password (negative test) '" + bad_pwd + "': " + str(verify_password(stored_password, bad_pwd)) + "\n\n")
+##negative test (bad password)
+#bad_pwd = 'BadPassword2020!'
+#print("\n\nVerify Password (negative test) '" + bad_pwd + "': " + str(verify_password(stored_password, bad_pwd)) + "\n\n")
