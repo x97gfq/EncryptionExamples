@@ -1,5 +1,5 @@
 #based on https://nitratine.net/blog/post/encryption-and-decryption-in-python/
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet 
 
 key = Fernet.generate_key() #generate a key
 

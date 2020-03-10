@@ -1,4 +1,4 @@
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet 
 
 input_file = input('What file to decrypt? (*.encrypted): ')
 key = input('Key? ')
