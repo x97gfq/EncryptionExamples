@@ -3,11 +3,11 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import padding
-import binascii
+import base64
 
-message = b'put your message here!'
+message = b'I love Acadia!!'
 
-#retrieve the public key and use it here
+#retrieve the public key from the .pem and use it here
 #
 # public_key = 
 #
@@ -22,9 +22,4 @@ encrypted = public_key.encrypt(
     )
 )
 
-#prints byte string
-print(encrypted)
-
-#prints ascii string
-#encryptedString = binascii.hexlify(encrypted).decode('ascii')
-#print(encryptedString)
+print(base64.b64encode(encrypted))
